@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 30%;
+        }
+
+        #map-ans {
+            height: 400px;
+            width: 70%;
+        }
+
+        a[href^="http://maps.google.com/maps"] {
+            display: none !important
+        }
+
+        a[href^="https://maps.google.com/maps"] {
+            display: none !important
+        }
+
+        .gmnoprint a,
+        .gmnoprint span,
+        .gm-style-cc {
+            display: none;
+        }
+
+        .gmnoprint div {
+            background: none !important;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h3>Where on earth is this?</h3>
+            <h5>Find the place marked on the left side by clicking on the map on the right.</h5>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="col-md-4 panel" id="map"></div>
+                <div class="col-md-8 panel" id="map-ans"></div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 panel">
+                    <h6>You can use some help here</h6>
+
+                    <a href="#" class="btn btn-primary btn-primary btn-block"><span class="glyphicon glyphicon-zoom-in"></span> Zoom in</a>
+
+                    <a href="#" class="btn btn-primary btn-primary btn-block"><span class="glyphicon glyphicon-zoom-out"></span> Zoom out</a>
+                </div>
+                <br>
+
+            </div>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa_N-0Myw0XIjwktREDz7lrXkt-ibJ2xU&callback=initMap">
+
+            </script>
+            <script src="./initialize-data.js"></script>
+            <script src="./app.js"></script>
+        </div>
+</body>
+
+</html>
