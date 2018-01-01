@@ -80,8 +80,7 @@ function initMap() {
         var attemptDistance = distance(questionPlace.lat(), questionPlace.lng(), attemptPlace.lat(), attemptPlace.lng())
 
         attempts.push({
-            questionPlace: questionPlace, attempt: attempt, place: attemptPlace, distance: attemptDistance, radius: attemptRadius,
-            circle: circle, text: text
+            questionPlace: questionPlace, attempt: attempt, place: attemptPlace, distance: attemptDistance, radius: attemptRadius, circle: circle, text: text
         })
 
         map.panTo(attemptPlace);
@@ -94,6 +93,10 @@ function initMap() {
     }
 
     function success(questionMap, questionMarker, answerMap, attempts) {
+
+        answerMap.setCenter(questionPlace);
+        answerMap.panTo(questionPlace);
+
         questionPlace = newPlace();
         questionMap.setCenter(questionPlace);
         questionMarker.setPosition(questionPlace);

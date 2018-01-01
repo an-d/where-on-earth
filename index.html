@@ -31,8 +31,9 @@
             background: none !important;
         }
     </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
 
 </head>
 
@@ -40,32 +41,24 @@
     <div class="container">
         <div class="row">
             <h3>Where on earth is this?</h3>
-            <h5>Find the place marked on the left side by clicking on the map on the right.</h5>
+            <h5>The goal is to find the place marked on the left hand side by clicking on the map on the right hand side.</h5>
         </div>
         <div class="row">
-            <div class="row">
-                <div class="col-md-4 panel" id="map"></div>
-                <div class="col-md-8 panel" id="map-ans"></div>
-
+                <div class="col-md-4 panel border rounded" id="map"></div>
+                <div class="col-md-8 panel border rounded" id="map-ans"></div>
             </div>
-
             <div class="row">
                 <div class="col-md-4 panel">
-                    <h6>You can use some help here</h6>
-
-                    <a href="#" class="btn btn-primary btn-primary btn-block"><span class="glyphicon glyphicon-zoom-in"></span> Zoom in</a>
-
-                    <a href="#" class="btn btn-primary btn-primary btn-block"><span class="glyphicon glyphicon-zoom-out"></span> Zoom out</a>
+                    <h5>You can use some help here</h5>
+                    <a href="#" class="btn btn-primary btn-secondary float-left "><span class="glyphicon glyphicon-zoom-in"></span> Zoom in</a>
+                    <a href="#" class="btn btn-primary btn-secondary float-right"><span class="glyphicon glyphicon-zoom-out"></span> Zoom out</a>
                 </div>
+                <div class="col-md-8 panel"></div>
                 <br>
-
-            </div>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa_N-0Myw0XIjwktREDz7lrXkt-ibJ2xU&callback=initMap">
-
-            </script>
-            <script src="./initialize-data.js"></script>
-            <script src="./app.js"></script>
         </div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa_N-0Myw0XIjwktREDz7lrXkt-ibJ2xU&callback=initMap">        </script>
+        <script src="./initialize-data.js"></script>
+        <script src="./app.js"></script>
 </body>
 
 </html>
